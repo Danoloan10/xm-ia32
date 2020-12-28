@@ -65,7 +65,7 @@ defconfig: links Kconfig.ver
 
 #$(XTRATUM_PATH)/core/include/autoconf.h: $(XTRATUM_PATH)/core/.config silentoldconfig
 
-core: $(XTRATUM_PATH)/core/include/autoconf.h xm.lds generate_offsets
+core: $(XTRATUM_PATH)/core/include/autoconf.h xm.lds generate_offsets links
 	@exec echo -e "\n> Building XM Core";
 	for dir in $(XMCORE_SUBDIRS) ; do \
 		echo "  - $$dir"	; \
